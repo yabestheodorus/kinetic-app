@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+}
+
+@theme {
+  --color-primaryColor: #F3FFCA;
+
+}
+
+body {
+  background-color: #0e0e0e;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+
+
+.font-headline {
+  font-family: 'Lexend', sans-serif;
+}
+
+.font-body {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-label {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Custom Utilities from code.html */
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(243, 255, 202, 0.3);
+  color: transparent;
+}
+
+.glow-overlay {
+  background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(243, 255, 202, 0.08) 0%, transparent 40%);
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* 0px Border Radius Override */
+* {
+  border-radius: 0px !important;
+}
+
+.rounded-full {
+  border-radius: 9999px !important;
+}
+
+/* GSAP SplitText Masking Styles */
