@@ -2,7 +2,6 @@ import React, { Suspense, useRef } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { useGLTF, Stage, Environment, Float, Center, OrbitControls, Text } from '@react-three/drei';
 import HeroShoe from './models/HeroShoe';
-import { useGSAP } from '@gsap/react';
 import gsap, { ScrollTrigger } from 'gsap/all';
 
 

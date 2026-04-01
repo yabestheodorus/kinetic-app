@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
-import ShoeCanvas from './ShoeCanvas';
 
 gsap.registerPlugin(ScrollTrigger);
 
