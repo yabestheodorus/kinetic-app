@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 const ShoeModel = ({ primaryColor, secondaryColor, ropeColor, initialPosition, initialRotation, initialScale }) => {
 
 
-  const isMobile = window.innerWidth < 768;
+  const isMobile = typeof window !== 'undefined' ? window.innerWidth < 768 : false;
 
   const onShoeRefReady = (shoeRef) => {
     if (shoeRef) {
@@ -86,7 +86,7 @@ const ShoeModel = ({ primaryColor, secondaryColor, ropeColor, initialPosition, i
 const ShoeCanvas = ({ primaryColor = "#000000", secondaryColor = "#ffffff", ropeColor = "#ffffff" }) => {
   // Set initial state through props for reliability with Suspense
 
-  const isMobile = window.innerWidth < 768;
+  const isMobile = typeof window !== 'undefined' ? window.innerWidth < 768 : false;
   const initialPosition = isMobile ? [0, 1.65, 0] : [0, 1.5, 0];
   const initialRotation = [0.6, -0.2, 0.3];
   const initialScale = isMobile ? [0.5, 0.5, 0.5] : [0.7, 0.7, 0.7];
