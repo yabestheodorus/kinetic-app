@@ -28,11 +28,11 @@ const TechSpec = () => {
 
   })
   return (
-    <section class="bg-surface relative h-[100vh] flex items-center
-     md:py-[8.5rem] px-6 md:px-[8.5rem]">
+    <section class="bg-surface relative h-[100vh] flex items-center justify-center
+     md:py-[8.5rem] px-6 md:px-[8.5rem] ">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
         <div class="md:col-span-4 order-2 md:order-1 flex flex-col gap-16">
-          <div ref={contentRef1} class="space-y-4 stagger">
+          <div ref={contentRef1} class="space-y-4 stagger z-50">
             <div class="flex items-center gap-4">
               <span class="text-primary font-label text-xs">01.</span>
               <h3 class="font-headline text-2xl font-bold uppercase tracking-tight">Nitro-Plate Core</h3>
@@ -44,7 +44,7 @@ const TechSpec = () => {
               Rigidity: 98.4% | Weight: 42g
             </div>
           </div>
-          <div ref={contentRef2} class="space-y-4 stagger">
+          <div ref={contentRef2} class="space-y-4 stagger z-50">
             <div class="flex items-center gap-4">
               <span class="text-primary font-label text-xs">02.</span>
               <h3 class="font-headline text-2xl font-bold uppercase tracking-tight">Hyper-Weave Mesh</h3>

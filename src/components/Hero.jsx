@@ -26,15 +26,11 @@ const Hero = () => {
   }, []);
 
   return (
-    <header ref={containerRef} className="relative h-[110vh] w-full flex items-center overflow-hidden bg-surface py-24">
+    <header ref={containerRef} className=" relative w-full flex items-center overflow-hidden  py-24 ">
 
-      {/* Background Layer */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(60%_60%_at_50%_50%,transparent_0%,rgba(14,14,14,0.8)_100%)]"></div>
-      </div>
 
-      <div className="relative z-10 px-8 md:px-24 w-full flex flex-col items-center justify-center text-center">
+
+      <div className="  px-8 md:px-24 w-full flex flex-col items-center justify-center text-center">
         <div className="max-w-full relative">
           <p ref={subtitleRef} className="font-label text-primary tracking-[0.4em] uppercase mb-12 text-xs md:text-sm">
             PERFORMANCE WITHOUT LIMITS
@@ -42,15 +38,15 @@ const Hero = () => {
 
 
 
-          <div className="relative flex flex-col items-center justify-center w-full">
+          <div className=" flex flex-col items-center justify-center w-full z-50">
             {/* KINETIC (Back Layer) */}
             <h1
               ref={kineticRef}
               className="font-headline font-black
                -translate-x-8 md:-translate-x-1/4 text-7xl
                 md:text-[min(12vw,10rem)] leading-none tracking-tighter 
-                uppercase z-0 text-white select-none 
-                translate-y-4 md:translate-y-8"
+                uppercase  text-white select-none 
+                translate-y-4 md:translate-y-8 z-40"
             >
               KINETIC
             </h1>
@@ -61,7 +57,7 @@ const Hero = () => {
               className="font-headline font-black 
               translate-x-3 md:translate-x-1/4 text-7xl 
               md:text-[min(12vw,10rem)] leading-none 
-              tracking-tighter uppercase z-20  text-stroke select-none 
+              tracking-tighter uppercase   text-stroke select-none 
               translate-y-4 md:translate-y-8 relative"
             >
               FLOWRUN

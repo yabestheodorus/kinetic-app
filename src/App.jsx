@@ -8,12 +8,9 @@ import CTA from './components/CTA';
 import Footer from './components/Footer';
 import ShoeCanvas from './components/ShoeCanvas';
 import TechSpec from './components/techspec/TechSpec';
-import useColorStore from './store/useColorStore';
 
 function App() {
 
-
-  const { primaryColor, secondaryColor, ropeColor } = useColorStore();
 
   const isMobile = typeof window !== 'undefined' ? window.innerWidth < 768 : false;
 
@@ -40,8 +37,8 @@ function App() {
 
         <section className='relative '>
           {/* SHOE (Middle Layer) */}
-          <div className={`absolute w-[100vw] ${isMobile ? 'h-[500vh]' : 'h-[450vh]'} inset-0 top-0  z-40 pointer-events-none flex items-center justify-center`}>
-            <ShoeCanvas primaryColor={primaryColor} secondaryColor={secondaryColor} ropeColor={ropeColor} />
+          <div className={`absolute w-[100vw] ${isMobile ? 'h-[450vh]' : 'h-[350vh]'} inset-0 top-0  z-30 pointer-events-none flex items-center justify-center`}>
+            <ShoeCanvas />
           </div>
 
         </section>
