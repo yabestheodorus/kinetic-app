@@ -3,12 +3,20 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ProductShowcase from './components/ProductShowcase';
 import Philosophy from './components/Philosophy';
-import FeaturedProduct from './components/FeaturedProduct';
+import FeaturedProduct from './components/featured-product/FeaturedProduct';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import ShoeCanvas from './components/ShoeCanvas';
+import TechSpec from './components/techspec/TechSpec';
+import useColorStore from './store/useColorStore';
 
 function App() {
+
+
+  const { primaryColor, secondaryColor, ropeColor } = useColorStore();
+
+  const isMobile = typeof window !== 'undefined' ? window.innerWidth < 768 : false;
+
   useEffect(() => {
     // Mouse Glow Effect
     const handleMouseMove = (e) => {
@@ -32,8 +40,8 @@ function App() {
 
         <section className='relative '>
           {/* SHOE (Middle Layer) */}
-          <div className="absolute w-[100vw] h-[350vh] inset-0 top-0  z-50 pointer-events-none flex items-center justify-center">
-            <ShoeCanvas primaryColor="#F3FFCA" secondaryColor="#ffffff" ropeColor="#ffffff" />
+          <div className={`absolute w-[100vw] ${isMobile ? 'h-[500vh]' : 'h-[450vh]'} inset-0 top-0  z-40 pointer-events-none flex items-center justify-center`}>
+            <ShoeCanvas primaryColor={primaryColor} secondaryColor={secondaryColor} ropeColor={ropeColor} />
           </div>
 
         </section>
@@ -42,8 +50,10 @@ function App() {
         <Hero />
         <Philosophy />
 
-        <ProductShowcase />
+        <TechSpec />
         <FeaturedProduct />
+
+        <ProductShowcase />
         <CTA />
       </main>
 

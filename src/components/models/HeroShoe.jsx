@@ -9,7 +9,7 @@ Title: Adidas Ozweego
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
-function HeroShoe({ primaryColor = "#000000", secondaryColor = "#ffffff", ropeColor = "#ffffff", ...props }) {
+function HeroShoe({ primaryColor = "#000000", secondaryColor = "#ffffff", ropeColor = "#F3FFCA", ...props }) {
   const { nodes, materials } = useGLTF('/models/nike.glb')
 
 
@@ -31,7 +31,7 @@ function HeroShoe({ primaryColor = "#000000", secondaryColor = "#ffffff", ropeCo
   customMaterials.metall_svart.color.set(secondaryColor)
 
   //rope color
-  customMaterials['Material.006'].color.set(ropeColor)
+  customMaterials['Material.006'].color.set(secondaryColor)
   customMaterials['Material.004'].color.set(ropeColor)
   customMaterials['Material.001'].color.set(ropeColor)
   customMaterials['Material.003'].color.set(ropeColor)
