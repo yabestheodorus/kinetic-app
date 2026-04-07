@@ -60,22 +60,30 @@ const FeaturedProduct = () => {
         toggleActions: "play none none reverse",
       }
     });
+
+
+    gsap.to(sectionRef.current, {
+      clipPath: "circle(120% at 50% 50%)",
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top bottom",
+        end: "+=100%",
+        scrub: true
+      }
+    });
+
   });
 
   return (
-    <section ref={sectionRef} d='featured-product-anchor' className="py-24 w-full  bg-surface flex-col md:flex-row flex items-center overflow-hidden border-t border-white/5 ">
-
-
+    <section ref={sectionRef} d='featured-product-anchor' className=" py-24 w-full flex-col md:flex-row flex items-center overflow-hidden border-t border-white/5 h-[100vh]  bg-gray-200">
 
       {/* Content Layer */}
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center z-50">
-
-
+      <div className="w-full h-full grid grid-cols-1 md:grid-cols-2  items-center ">
 
         {/* Title big typhography */}
         <div ref={contentRef} className="relative order-1 md:order-2 md:col-start-2 md:row-start-1 text-center md:text-left">
-          <p className="font-label text-primary tracking-[0.4em] mb-8 uppercase text-sm font-bold">CUSTOMIZE YOUR SHOES</p>
-          <h2 className="font-headline text-6xl md:text-[7rem] font-black tracking-tighter uppercase mb-6 leading-[0.85]">
+          <p className="font-label text-primary tracking-[0.4em] mb-2 uppercase text-sm font-bold">CUSTOMIZE YOUR SHOES</p>
+          <h2 className="font-headline text-6xl md:text-[7rem] font-black tracking-tighter uppercase leading-[0.85]">
             KINETIC<br />FLOWRUN
           </h2>
 
@@ -83,7 +91,7 @@ const FeaturedProduct = () => {
 
 
         {/* canvas */}
-        <div className=" w-full h-[350px] md:h-full order-2 md:order-1 md:col-start-1 md:row-span-2 flex justify-center " >
+        <div className=" w-full h-[320px] md:h-full order-2 md:order-1 md:col-start-1 md:row-span-2 flex justify-center " >
           <ShoeCanvasCustom />
         </div>
 
@@ -95,7 +103,7 @@ const FeaturedProduct = () => {
             <StatItem label="TRACTION" value="AEROGRIP POLYMER" />
           </div> */}
 
-        <div className='order-3 md:order-2 md:col-start-2 md:row-start-2 text-center md:text-left px-6 md:px-0'>
+        <div className='order-3 md:order-2 md:col-start-2 md:row-start-2 text-center md:text-left px-6 md:px-0 bg-white/50 py-6'>
           <ColorPallete onColorChange={(colors) => {
             setPrimaryColor(colors.primaryColor);
             setSecondaryColor(colors.secondaryColor);

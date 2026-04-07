@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import Tooltips from './Tooltips'
 import { useGSAP } from '@gsap/react';
-import gsap from 'gsap/all';
+import gsap, { ScrollTrigger } from 'gsap/all';
 
 const TechSpec = () => {
 
@@ -13,10 +13,9 @@ const TechSpec = () => {
       trigger: contentRef1.current,
       start: "top 65%",
       toggleActions: "play none none reverse",
+
     }
-    const timeline = gsap.timeline({
-      scrollTrigger,
-    })
+
     gsap.from(".stagger", {
       x: -50,
       opacity: 0,
@@ -25,10 +24,23 @@ const TechSpec = () => {
       scrollTrigger,
     })
 
+    // gsap.to("#container-scroll", {
+    //   scrollTrigger: {
+    //     trigger: "#container-scroll",
+    //     start: "top top",
+    //     end: "+=100%",
+    //     pin: true,
+    //     pinSpacing: false,
+    //     scrub: 1,
+    //     refreshPriority: 1,
+    //   },
+    // });
+
+
 
   })
   return (
-    <section class="bg-surface relative h-[100vh] flex items-center justify-center
+    <section id='container-scroll' class="bg-surface relative h-[100vh] flex items-center justify-center
      md:py-[8.5rem] px-6 md:px-[8.5rem] ">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
         <div class="md:col-span-4 order-2 md:order-1 flex flex-col gap-16">

@@ -36,7 +36,7 @@ const ShoeModel = ({ primaryColor, secondaryColor, ropeColor, initialPosition,
           x: -0.3,
           y: isMobile ? 0.65 : 0.2,
           z: 0,
-          ease: "power2.inOut",
+          ease: "power3.out",
           duration: 1,
         })
         // P2 → P3  (second half of scroll)

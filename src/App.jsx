@@ -8,6 +8,7 @@ import CTA from './components/CTA';
 import Footer from './components/Footer';
 import ShoeCanvas from './components/ShoeCanvas';
 import TechSpec from './components/techspec/TechSpec';
+import PageTransition from './components/PageTransition';
 
 function App() {
 
@@ -48,7 +49,11 @@ function App() {
         <Philosophy />
 
         <TechSpec />
-        <FeaturedProduct />
+
+        <PageTransition >
+          <FeaturedProduct />
+        </PageTransition>
+
 
         <ProductShowcase />
         <CTA />

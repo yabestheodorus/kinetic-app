@@ -14,6 +14,7 @@ const ShoeCanvasCustom = () => {
   // Set initial state through props for reliability with Suspense
 
   const { primaryColor, secondaryColor, ropeColor } = useColorStore();
+  const isMobile = window.innerWidth < 768
 
   return (
 
@@ -38,7 +39,7 @@ const ShoeCanvasCustom = () => {
                 primaryColor={primaryColor}
                 secondaryColor={secondaryColor}
                 ropeColor={ropeColor}
-                scale={2.8}
+                scale={isMobile ? 4 : 2}
                 position={[0.5, 0, 0]}
                 rotation={[0.5, -1, 0.5]}
               />
